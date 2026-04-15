@@ -1,0 +1,62 @@
+Script started on 2026-03-08 14:14:16-07:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="160" LINES="50"]
+[?2004hhanwen@hanwen:~$ mkdir ~P1[K[K/P1-DiskFull
+[?2004l[?2004hhanwen@hanwen:~$ cd ~/P1-DiskFull
+[?2004l[?2004hhanwen@hanwen:~/P1-DiskFull$ echo "==== P1 DISK FULL START ===="
+[?2004l==== P1 DISK FULL START ====
+[?2004hhanwen@hanwen:~/P1-DiskFull$ "[Kecho "Disk FUll[K[K[Kull Incident Lab"
+[?2004lDisk Full Incident Lab
+[?2004hhanwen@hanwen:~/P1-DiskFull$ date
+[?2004lSun Mar  8 02:16:00 PM PDT 2026
+[?2004hhanwen@hanwen:~/P1-DiskFull$ df -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        30G  6.9G   22G  25% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  374G  579G  40% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~/P1-DiskFull$ fallocate -l 18G bigfile1
+[?2004l[?2004hhanwen@hanwen:~/P1-DiskFull$ df -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        30G   25G  3.1G  90% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  374G  579G  40% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~/P1-DiskFull$ fallocate -l 22[KG bigfile2
+[?2004l[?2004hhanwen@hanwen:~/P1-DiskFull$ \[Kdf -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        30G   27G  1.1G  97% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  374G  579G  40% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~/P1-DiskFull$ dd if=/dev/zero of=triggerfile bs=100M status=progress
+[?2004ldd: error writing 'triggerfile': No space left on device
+11+0 records in
+10+0 records out
+1076711424 bytes (1.1 GB, 1.0 GiB) copied, 0.778833 s, 1.4 GB/s
+[?2004hhanwen@hanwen:~/P1-DiskFull$ du -ah . | sort -rf | head
+[?2004l22G	.
+2.1G	./bigfile2
+19G	./bigfile1
+1.1G	./triggerfile
+[?2004hhanwen@hanwen:~/P1-DiskFull$ rm bigfile1 bigi[Kfile2 triggerfile 
+[?2004l[?2004hhanwen@hanwen:~/P1-DiskFull$ df =[K-j[Kh
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        30G  6.9G   22G  25% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  374G  579G  40% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~/P1-DiskFull$ echo "==== P1 Disk[K[K[KIK [K[K[KISK FULL END ++[K[K===="
+[?2004l==== P1 DISK FULL END ====
+[?2004hhanwen@hanwen:~/P1-DiskFull$ date
+[?2004lSun Mar  8 02:24:00 PM PDT 2026
+[?2004hhanwen@hanwen:~/P1-DiskFull$ exit
+[?2004lexit
+
+Script done on 2026-03-08 14:24:02-07:00 [COMMAND_EXIT_CODE="0"]
