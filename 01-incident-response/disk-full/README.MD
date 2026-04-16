@@ -39,6 +39,7 @@ Disk usage returned to normal after cleanup:
 
 ```bash
 df -h
+```
 Automation (Bash)
 
 After completing the manual troubleshooting process, a Bash script was added to improve efficiency by automating disk usage detection and root cause analysis.
