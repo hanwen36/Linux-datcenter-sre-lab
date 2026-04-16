@@ -37,7 +37,9 @@ Removed large files and freed up disk space.
 Disk usage returned to normal after cleanup:
 
 ```bash
-df -h
+df -h 
+
+```md id="force_close"
 
 Prevention
 Monitor disk usage regularly
