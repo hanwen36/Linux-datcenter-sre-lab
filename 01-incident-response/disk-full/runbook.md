@@ -7,21 +7,22 @@
 
 ---
 
-## Step 1: Check filesystem usage
-```bash
+##Check filesystem usage
 df -h
-Step 2: Identify large directories
+Identify large directories
 du -sh /* 2>/dev/null
-Step 3: Identify large files
+Identify large files
 du -ah / | sort -rh | head -20 2>/dev/null
-Step 4: Remediation
+Remediation
 
 Remove unnecessary files:
 
 rm -f <large_files>
-Step 5: Verify recovery
+
+Verify recovery
 df -h
-Step 6: If space not released
+
+If space not released
 
 Check for deleted files still in use:
 
@@ -30,6 +31,7 @@ lsof | grep deleted
 Kill the process if necessary:
 
 kill -9 <PID>
+
 Notes
 Always verify before deleting files
 Avoid removing system-critical files
