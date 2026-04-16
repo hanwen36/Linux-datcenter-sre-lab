@@ -1,0 +1,6 @@
+## Prevention
+
+- Monitor disk usage regularly
+- Set alerts when usage exceeds 80%
+- Implement log rotation (logrotate)
+- Clean temporary files periodically
