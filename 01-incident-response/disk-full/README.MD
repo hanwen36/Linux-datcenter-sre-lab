@@ -35,6 +35,8 @@ Disk usage returned to normal after cleanup:
 ```bash
 df -h
 
+```
+
 ---
 
 ## ⭐ Automation（🔥关键加分点）
