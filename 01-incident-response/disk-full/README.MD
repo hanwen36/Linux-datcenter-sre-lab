@@ -40,28 +40,28 @@ Disk usage returned to normal after cleanup:
 ```bash
 df -h
 ```
-Automation (Bash)
+## Automation (Bash)
 
 After completing the manual troubleshooting process, a Bash script was added to improve efficiency by automating disk usage detection and root cause analysis.
 
 This approach simulates how engineers enhance troubleshooting workflows in real-world environments.
 
-Script:
+## Script:
 
 automation/disk_monitor_automation.sh
 
-Features:
+## Features:
 
 Detect disk usage
 Identify large files
 Highlight possible root causes
 Provide troubleshooting suggestions
-Prevention
+## Prevention
 Monitor disk usage regularly
 Set alerts when usage exceeds 80%
 Implement log rotation (logrotate)
 Clean temporary files periodically
-AWS Scenario
+## AWS Scenario
 
 In a real AWS environment:
 
@@ -70,19 +70,19 @@ Set CloudWatch alarms when thresholds are exceeded
 Send alerts via SNS
 Store logs in CloudWatch Logs
 Use Lambda or cron jobs to automate cleanup
-Commands Used
+## Commands Used
 df -h
 fallocate
 dd
 du -ah
 sort -rh
 rm -f
-Result
+## Result
 
 The disk full issue was successfully reproduced and resolved.
 The system returned to normal operation.
 
-Key Learning
+## Key Learning
 How to detect disk full conditions
 How to identify large files efficiently
 How to safely recover disk space
