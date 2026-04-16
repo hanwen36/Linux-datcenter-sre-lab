@@ -54,3 +54,19 @@ Set CloudWatch alarms when usage exceeds thresholds
 Send alerts via SNS notifications
 Store logs in CloudWatch Logs
 Use Lambda or cron jobs to automate disk cleanup
+Commands Used
+df -h
+fallocate
+dd
+du -ah
+sort -rh
+rm -f
+Result
+
+The disk full issue was successfully reproduced and resolved. The system returned to normal operation.
+
+Key Learning
+How to detect disk full conditions
+How to identify large files efficiently
+How to safely recover disk space
+Importance of proactive monitoring
