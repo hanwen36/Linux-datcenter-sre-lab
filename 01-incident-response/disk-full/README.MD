@@ -37,7 +37,7 @@ Removed large files and freed up disk space.
 Disk usage returned to normal after cleanup:
 
 
-``` bash
+```bash
 df -h
 
 Prevention
