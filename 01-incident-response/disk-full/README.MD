@@ -33,12 +33,12 @@ Removed large files and freed up disk space.
 
 ---
 
-## Validation
+##Validation
 Disk usage returned to normal after cleanup:
 
 ```bash
-df -h
-##Prevention
+df -h =
+Prevention
 Monitor disk usage regularly
 Set alerts when usage exceeds 80%
 Implement log rotation (logrotate)
