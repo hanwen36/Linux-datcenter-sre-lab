@@ -67,7 +67,7 @@ rm -f
 The disk full issue was successfully reproduced and resolved. The system returned to normal operation.
 
 ## Key Learning
--How to detect disk full conditions
--How to identify large files efficiently
--How to safely recover disk space
--Importance of proactive monitoring
+- How to detect disk full conditions
+- How to identify large files efficiently
+- How to safely recover disk space
+- Importance of proactive monitoring
