@@ -28,6 +28,7 @@ lsof | grep deleted
 Kill the process if necessary:
 
 kill -9 <PID>
+
 Notes
 Always verify before deleting files
 Avoid removing system-critical files
