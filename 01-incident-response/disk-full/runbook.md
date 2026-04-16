@@ -14,15 +14,11 @@ df -h
 
 ##Step 2: Identify large directories
 
-Run:
-
-du -sh /* 2>/dev/null
+Run: du -sh /* 2>/dev/null
 
 ##Step 3: Identify large files
 
-Run:
-
-du -ah / | sort -rh | head -20 2>/dev/null
+Run:  du -ah / | sort -rh | head -20 2>/dev/null
 
 ##Step 4: Remediation
 
@@ -32,9 +28,7 @@ rm -f <large_files>
 
 ##Step 5: Verify recovery
 
-Run:
-
-df -h
+Run:  df -h
 
 ##Step 6: If space not released
 
