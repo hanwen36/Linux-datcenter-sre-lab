@@ -55,9 +55,6 @@ Features:
 - Highlight possible root causes
 - Provide troubleshooting suggestions
 
-Example output:
-
-![Automation](screenshots/06-disk-full-automation-analysis.png)
  Prevention
 ## Prevention
 
@@ -65,7 +62,7 @@ Example output:
 - Set alerts when usage exceeds 80%
 - Implement log rotation (logrotate)
 - Clean temporary files periodically
- AWS Scenario（简单就好）
+ AWS Scenario
 ## AWS Scenario
 
 In a real AWS environment:
