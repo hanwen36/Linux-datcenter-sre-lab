@@ -1,8 +1,0 @@
-## AWS Scenario
-
-In a real AWS environment:
-
-- Disk usage would be monitored using CloudWatch
-- Alerts would trigger when usage exceeds thresholds
-- Logs would be stored in CloudWatch Logs
-- Automation (Lambda or cron) could clean up disk space
