@@ -41,7 +41,7 @@ df -h
 
 ##  Automation
 
-```md
+
 ## Automation (Bash)
 
 A Bash script was created to automate disk usage detection and assist with root cause analysis.
