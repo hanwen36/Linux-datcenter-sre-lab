@@ -35,8 +35,9 @@ Removed large files and freed up disk space.
 
 ##Validation
 Disk usage returned to normal after cleanup:
-
+```bash
 df -h 
+
 
 Prevention
 Monitor disk usage regularly
