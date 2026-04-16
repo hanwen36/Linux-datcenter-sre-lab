@@ -41,12 +41,12 @@ Disk usage returned to normal after cleanup:
 df -h
 ```
 
-Prevention
+## Prevention
 Monitor disk usage regularly
 Set alerts when usage exceeds 80%
 Implement log rotation (logrotate)
 Clean temporary files periodically
-AWS Scenario
+## AWS Scenario
 
 In a real AWS environment:
 
@@ -55,18 +55,18 @@ Set CloudWatch alarms when usage exceeds thresholds
 Send alerts via SNS notifications
 Store logs in CloudWatch Logs
 Use Lambda or cron jobs to automate disk cleanup
-Commands Used
+## Commands Used
 df -h
 fallocate
 dd
 du -ah
 sort -rh
 rm -f
-Result
+## Result
 
 The disk full issue was successfully reproduced and resolved. The system returned to normal operation.
 
-Key Learning
+## Key Learning
 How to detect disk full conditions
 How to identify large files efficiently
 How to safely recover disk space
