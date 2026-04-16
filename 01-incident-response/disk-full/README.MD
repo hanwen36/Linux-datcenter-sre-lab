@@ -2,14 +2,14 @@
 
 ## Summary
 A disk full incident was simulated on a Linux server. The filesystem reached 100% usage, causing write operations to fail.
-⭐ Incident Scenario
+ Incident Scenario
 ## Incident Scenario
 
 During testing, large files were created, causing the disk to fill up completely.  
 When attempting to write additional data, the system returned the error:
 
 "No space left on device"
-⭐ Timeline
+ Timeline
 ## Timeline
 
 1. Checked disk usage using `df -h`
@@ -19,15 +19,15 @@ When attempting to write additional data, the system returned the error:
 5. Identified large files using `du -ah | sort -rh`
 6. Removed unnecessary files
 7. Verified system recovery
-⭐ Root Cause
+ Root Cause
 ## Root Cause
 
 Large files consumed all available disk space, resulting in filesystem exhaustion.
-⭐ Resolution
+ Resolution
 ## Resolution
 
 Removed large files and freed up disk space.
-⭐ Validation（重要）
+ Validation
 ## Validation
 
 Disk usage returned to normal after cleanup:
@@ -39,7 +39,7 @@ df -h
 
 ---
 
-## ⭐ Automation（🔥关键加分点）
+##  Automation
 
 ```md
 ## Automation (Bash)
@@ -58,14 +58,14 @@ Features:
 Example output:
 
 ![Automation](screenshots/06-disk-full-automation-analysis.png)
-⭐ Prevention
+ Prevention
 ## Prevention
 
 - Monitor disk usage regularly
 - Set alerts when usage exceeds 80%
 - Implement log rotation (logrotate)
 - Clean temporary files periodically
-⭐ AWS Scenario（简单就好）
+ AWS Scenario（简单就好）
 ## AWS Scenario
 
 In a real AWS environment:
@@ -75,7 +75,7 @@ In a real AWS environment:
 - Send alerts via SNS
 - Store logs in CloudWatch Logs
 - Use Lambda or cron jobs to automate cleanup
-⭐ Commands Used
+ Commands Used
 ## Commands Used
 
 - df -h
@@ -84,12 +84,12 @@ In a real AWS environment:
 - du -ah
 - sort -rh
 - rm -f
-⭐ Result
+ Result
 ## Result
 
 The disk full issue was successfully reproduced and resolved.  
 The system returned to normal operation.
-⭐ Key Learning（🔥面试用）
+ Key Learning
 ## Key Learning
 
 - How to detect disk full conditions
