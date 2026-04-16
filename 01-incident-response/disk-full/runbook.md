@@ -5,8 +5,10 @@
 - System slow or unresponsive
 - Error message: "No space left on device"
 
+---
+
 ## Step 1: Check filesystem usage
-bash
+```bash
 df -h
 Step 2: Identify large directories
 du -sh /* 2>/dev/null
@@ -16,7 +18,7 @@ Step 4: Remediation
 
 Remove unnecessary files:
 
-rm -f <large files>
+rm -f <large_files>
 Step 5: Verify recovery
 df -h
 Step 6: If space not released
@@ -28,7 +30,6 @@ lsof | grep deleted
 Kill the process if necessary:
 
 kill -9 <PID>
-
 Notes
 Always verify before deleting files
 Avoid removing system-critical files
