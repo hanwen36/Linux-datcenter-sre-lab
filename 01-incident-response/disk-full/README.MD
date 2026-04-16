@@ -39,8 +39,6 @@ Disk usage returned to normal after cleanup:
 ```bash
 df -h 
 
----
-
 Prevention
 Monitor disk usage regularly
 Set alerts when usage exceeds 80%
