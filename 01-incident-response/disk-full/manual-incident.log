@@ -1,0 +1,41 @@
+est-data$ clear
+[?2004l[H[J[3J[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ du =[K-ah
+[?2004l16G	./file1
+29M	./trigger
+9.1G	./file3
+61G	./file2
+85G	.
+[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ du -ah . | sort -rh | head
+[?2004l85G	.
+61G	./file2
+16G	./file1
+9.1G	./file3
+29M	./trigger
+[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ rm[K[Krm -f file1 file2 file3 trigger 
+[?2004l[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ ls
+[?2004l[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ lsrm -f file1 file2 file3 trigger [6Pdu -ah . | sort -rh | head
+[?2004l4.0K	.
+[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ df -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        96G  7.7G   85G   9% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  469G  483G  50% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ date
+[?2004lWed Apr 15 07:39:56 PM PDT 2026
+[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ =[Kecho "===== DIS FULL[K[K[K[K[KK FULL INCIDENT END ===== "
+[?2004l===== DISK FULL INCIDENT END ===== 
+[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ EXIT
+[?2004lEXIT: command not found
+[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ cp[K[Kls
+[?2004l[?2004hhanwen@hanwen:~/linux-datacenter-sre-lab/01-incident-response/disk-full/test-data$ cd
+[?2004l[?2004hhanwen@hanwen:~$ ls
+[?2004llearning.pem  [0m[01;34mlinux-datacenter-sre-lab[0m
+[?2004hhanwen@hanwen:~$ cd[K[Kcdexit
+[?2004lcdexit: command not found
+[?2004hhanwen@hanwen:~$ exit
+[?2004lexit
+
+Script done on 2026-04-15 19:42:50-07:00 [COMMAND_EXIT_CODE="127"]
