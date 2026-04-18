@@ -42,7 +42,7 @@ Identifies root cause
 Prompts for cleanup
 ## 4. User action
 y
-## 5. Validation
+# 5. Validation
 
 Script re-checks disk usage after cleanup
 
