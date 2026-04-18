@@ -30,32 +30,32 @@ disk_check.sh
 chmod +x disk_check.sh
 ./disk_check.sh
 ```
-Example Workflow
-1. Simulate disk full
+## Example Workflow
+## 1. Simulate disk full
 sudo fallocate -l 80G testfile.img
-2. Run the script
+## 2. Run the script
 ./disk_check.sh
-3. Script behavior
+## 3. Script behavior
 Detects high disk usage
 Displays largest files
 Identifies root cause
 Prompts for cleanup
-4. User action
+## 4. User action
 y
-5. Validation
+## 5. Validation
 
 Script re-checks disk usage after cleanup
 
-Example Output
+## Example Output
 [WARNING] High disk usage detected on /
 [ROOT CAUSE] /home/hanwen/testfile.img
 [ACTION REQUIRED]
 Do you want to delete this file? (y/n)
-Learning Outcome
+## Learning Outcome
 Automating disk monitoring
 Using Linux tools for root cause analysis
 Understanding incident response workflow
 Implementing safe cleanup procedures
-Notes
+## Notes
 This script is intended for learning and simulation
 In production environments, cleanup actions require proper approval
