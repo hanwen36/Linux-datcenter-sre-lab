@@ -31,18 +31,18 @@ chmod +x disk_check.sh
 ./disk_check.sh
 ```
 ## Example Workflow
-## 1. Simulate disk full
+1. Simulate disk full
 sudo fallocate -l 80G testfile.img
-## 2. Run the script
+2. Run the script
 ./disk_check.sh
-## 3. Script behavior
+3. Script behavior
 Detects high disk usage
 Displays largest files
 Identifies root cause
 Prompts for cleanup
-## 4. User action
+4. User action
 y
-# 5. Validation
+5. Validation
 
 Script re-checks disk usage after cleanup
 
