@@ -29,6 +29,7 @@ disk_check.sh
 ```bash
 chmod +x disk_check.sh
 ./disk_check.sh
+```
 Example Workflow
 1. Simulate disk full
 sudo fallocate -l 80G testfile.img
