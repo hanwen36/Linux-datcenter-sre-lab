@@ -12,6 +12,8 @@ Run:
 ```bash
 df -h
 
+```
+
 ## Step 2: Identify large directories
 
 Run: du -sh /* 2>/dev/null
