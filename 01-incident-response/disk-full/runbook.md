@@ -11,6 +11,7 @@
 Run:
 ```bash
 df -h
+```
 
 ##Step 2: Identify large directories
 
