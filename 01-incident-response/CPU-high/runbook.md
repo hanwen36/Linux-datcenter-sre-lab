@@ -18,10 +18,10 @@ Run:
 top
 
 ```
-##Look for:
+Look for:
 
-CPU usage near 100%
-High load average
+- CPU usage near 100%
+- High load average
 ## Step 2: Identify High CPU Processes
 
 Run:
