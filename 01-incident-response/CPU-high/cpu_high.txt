@@ -1,0 +1,675 @@
+Script started on 2026-04-19 00:35:25-07:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="160" LINES="50"]
+[?2004hhanwen@hanwen:~$ echo "===== CPU HIGH INCIDENT START ======[K"
+[?2004l===== CPU HIGH INCIDENT START =====
+[?2004hhanwen@hanwen:~$ D[Kdate
+[?2004lSun Apr 19 12:35:45 AM PDT 2026
+[?2004hhanwen@hanwen:~$ yes <[K> /dev/null &
+[?2004l[1] 2374
+[?2004hhanwen@hanwen:~$ yes > /dev/null &
+[?2004l[2] 2375
+[?2004hhanwen@hanwen:~$ jobs
+[?2004l[1]-  Running                 yes > /dev/null &
+[2]+  Running                 yes > /dev/null &
+[?2004hhanwen@hanwen:~$ top
+[?2004l[?25l[?1c[H[J[mtop - 00:39:13 up  6:38,  1 user,  load average: 2.02, 1.05, 0.46[m[39;49m[m[39;49m[K
+Tasks:[m[39;49m[1m 120 [m[39;49mtotal,[m[39;49m[1m   3 [m[39;49mrunning,[m[39;49m[1m 117 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
+%Cpu(s):[m[39;49m[1m 33.3 [m[39;49mus,[m[39;49m[1m 66.7 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3326.0 [m[39;49mfree,[m[39;49m[1m    441.7 [m[39;49mused,[m[39;49m[1m    366.2 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
+MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 [m[39;49mfree,[m[39;49m[1m      0.0 [m[39;49mused.[m[39;49m[1m   3474.3 [m[39;49mavail Mem [m[39;49m[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                  [m[39;49m[K
+[m[1m   2375 hanwen    20   0    5688   1992   1872 R 100.0   0.0   3:06.41 yes                                                                                      [m[39;49m[K
+[m[1m   2374 hanwen    20   0    5688   1984   1868 R  90.9   0.0   3:08.55 yes                                                                                      [m[39;49m[K
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ipv6_addrconf                                                               [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.54 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.05 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.90 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K[H[mtop - 00:39:16 up  6:38,  1 user,  load average: 2.02, 1.05, 0.46[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m 29.5 [m[39;49mus,[m[39;49m[1m 70.5 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+
+
+[K
+
+[m[1m   2375 hanwen    20   0    5688   1992   1872 R 100.0   0.0   3:09.43 yes                                                                                      [m[39;49m[K
+[m[1m   2374 hanwen    20   0    5688   1984   1868 R  99.7   0.0   3:11.56 yes                                                                                      [m[39;49m[K
+[m   1614 root      20   0  388068   9604   7716 S   0.3   0.2   0:00.83 upowerd                                                                                  [m[39;49m[K
+[m   2286 root      20   0       0      0      0 I   0.3   0.0   0:00.50 kworker/1:1-events                                                                       [m[39;49m[K
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ipv6_addrconf                                                               [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.54 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.05 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.90 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K[H[mtop - 00:39:19 up  6:38,  1 user,  load average: 2.01, 1.07, 0.47[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m 34.1 [m[39;49mus,[m[39;49m[1m 65.9 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3325.9 [m[39;49mfree,[m[39;49m[1m    441.8 [m[39;49mused,[m[39;49m[1m    366.2 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
+MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 [m[39;49mfree,[m[39;49m[1m      0.0 [m[39;49mused.[m[39;49m[1m   3474.2 [m[39;49mavail Mem [m[39;49m[m[39;49m[K
+[K
+
+[m[1m   2374 hanwen    20   0    5688   1984   1868 R 100.0   0.0   3:15.32 yes                                                                                      [m[39;49m[K
+[m[1m   2375 hanwen    20   0    5688   1992   1872 R  99.7   0.0   3:13.17 yes                                                                                      [m[39;49m[K
+[m   2289 root      20   0       0      0      0 I   0.3   0.0   0:00.01 kworker/u5:0-events_unbound                                                              [m[39;49m[K
+[m   2290 root      20   0       0      0      0 I   0.3   0.0   0:00.42 kworker/0:0-events                                                                       [m[39;49m[K
+
+
+
+
+
+
+
+
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ext4-rsv-conversion                                                         [m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 00:39:23 up  6:38,  1 user,  load average: 2.01, 1.08, 0.48[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m 20.0 [m[39;49mus,[m[39;49m[1m 80.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+
+
+[K
+
+[m[1m   2374 hanwen    20   0    5688   1984   1868 R 100.0   0.0   3:19.32 yes                                                                                      [m[39;49m[K
+[m[1m   2375 hanwen    20   0    5688   1992   1872 R  99.8   0.0   3:17.16 yes                                                                                      [m[39;49m[K
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ext4-rsv-conversion                                                         [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.54 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.05 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.90 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K[H[mtop - 00:39:26 up  6:38,  1 user,  load average: 2.01, 1.08, 0.48[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m 35.7 [m[39;49mus,[m[39;49m[1m 64.3 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+
+
+[K
+
+[m[1m   2374 hanwen    20   0    5688   1984   1868 R 100.0   0.0   3:22.33 yes                                                                                      [m[39;49m[K
+[m[1m   2375 hanwen    20   0    5688   1992   1872 R 100.0   0.0   3:20.17 yes                                                                                      [m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 00:39:29 up  6:38,  1 user,  load average: 2.01, 1.10, 0.49[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m 28.6 [m[39;49mus,[m[39;49m[1m 71.4 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3325.9 [m[39;49mfree,[m[39;49m[1m    441.7 [m[39;49mused,[m[39;49m[1m    366.2 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
+
+[K
+
+[m[1m   2375 hanwen    20   0    5688   1992   1872 R 100.0   0.0   3:23.18 yes                                                                                      [m[39;49m[K
+[m[1m   2374 hanwen    20   0    5688   1984   1868 R  99.7   0.0   3:25.33 yes                                                                                      [m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[51;1H
+[?25h[?0c[K[?2004hhanwen@hanwen:~$ ps aux --sort=[K+[K=-%cpu | head
+[?2004lUSER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hanwen      2375 99.9  0.0   5688  1992 pts/0    R    00:36   4:07 yes
+hanwen      2374 99.9  0.0   5688  1984 pts/0    R    00:36   4:09 yes
+root        2378  0.3  0.0      0     0 ?        I    00:39   0:00 [kworker/1:2-events]
+root        1974  0.2  0.0      0     0 ?        I    Apr18   0:15 [kworker/1:0-events]
+root        2036  0.1  0.0      0     0 ?        I    Apr18   0:04 [kworker/0:1-cgroup_release]
+root         997  0.0  0.0 287000  2812 ?        Sl   Apr18   0:23 /usr/bin/VBoxDRMClient
+root        2286  0.0  0.0      0     0 ?        I    00:30   0:00 [kworker/1:1-events]
+root        2290  0.0  0.0      0     0 ?        I    00:30   0:00 [kworker/0:0-events]
+root        2273  0.0  0.0      0     0 ?        I    00:20   0:00 [kworker/0:3-events]
+[?2004hhanwen@hanwen:~$ pkill yes
+[?2004l[1]-  Terminated              yes > /dev/null
+[2]+  Terminated              yes > /dev/null
+[?2004hhanwen@hanwen:~$ top
+[?2004l[?25l[?1c[H[J[mtop - 00:41:49 up  6:41,  1 user,  load average: 1.11, 1.21, 0.63[m[39;49m[m[39;49m[K
+Tasks:[m[39;49m[1m 118 [m[39;49mtotal,[m[39;49m[1m   1 [m[39;49mrunning,[m[39;49m[1m 117 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3325.9 [m[39;49mfree,[m[39;49m[1m    441.7 [m[39;49mused,[m[39;49m[1m    366.3 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
+MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 [m[39;49mfree,[m[39;49m[1m      0.0 [m[39;49mused.[m[39;49m[1m   3474.3 [m[39;49mavail Mem [m[39;49m[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                  [m[39;49m[K
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ipv6_addrconf                                                               [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.55 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.06 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.91 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K
+[m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K
+[m     51 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                [m[39;49m[K[H[mtop - 00:41:52 up  6:41,  1 user,  load average: 1.02, 1.19, 0.62[m[39;49m[m[39;49m[K
+
+
+
+
+[K
+
+[m    997 root      20   0  287000   2812   2544 S   0.3   0.1   0:23.31 VBoxDRMClient                                                                            [m[39;49m[K
+[m   2366 hanwen    20   0    5708   2284   2148 S   0.3   0.1   0:00.02 script                                                                                   [m[39;49m[K
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ipv6_addrconf                                                               [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.55 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.06 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.91 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K[H[mtop - 00:41:55 up  6:41,  1 user,  load average: 1.02, 1.19, 0.62[m[39;49m[m[39;49m[K
+Tasks:[m[39;49m[1m 119 [m[39;49mtotal,[m[39;49m[1m   1 [m[39;49mrunning,[m[39;49m[1m 118 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
+
+
+
+[K
+
+[m   2290 root      20   0       0      0      0 I   0.3   0.0   0:00.54 kworker/0:0-events                                                                       [m[39;49m[K
+[m[1m   2386 hanwen    20   0   11948   5984   3748 R   0.3   0.1   0:00.01 top                                                                                      [m[39;49m[K
+
+
+
+
+
+
+
+
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ext4-rsv-conversion                                                         [m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[H[mtop - 00:41:58 up  6:41,  1 user,  load average: 0.94, 1.17, 0.62[m[39;49m[m[39;49m[K
+
+
+MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3325.9 [m[39;49mfree,[m[39;49m[1m    441.6 [m[39;49mused,[m[39;49m[1m    366.3 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
+
+[K
+
+[m    363 root      rt   0  288988  27324   8760 S   0.3   0.7   0:08.40 multipathd                                                                               [m[39;49m[K
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ext4-rsv-conversion                                                         [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.55 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.06 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.91 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K
+[m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K[H[mtop - 00:42:01 up  6:41,  1 user,  load average: 0.94, 1.17, 0.62[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.2 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m 99.7 [m[39;49mid,[m[39;49m[1m  0.2 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+
+
+[K
+
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ext4-rsv-conversion                                                         [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.55 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.06 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.91 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K
+[m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K
+[m     51 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                [m[39;49m[K[H[mtop - 00:42:04 up  6:41,  1 user,  load average: 0.86, 1.15, 0.62[m[39;49m[m[39;49m[K
+
+%Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
+
+
+[K
+
+[m   2290 root      20   0       0      0      0 I   0.3   0.0   0:00.55 kworker/0:0-events                                                                       [m[39;49m[K
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ext4-rsv-conversion                                                         [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.55 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.06 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.91 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K
+[m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K[H[mtop - 00:42:07 up  6:41,  1 user,  load average: 0.79, 1.14, 0.61[m[39;49m[m[39;49m[K
+
+
+MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3325.9 [m[39;49mfree,[m[39;49m[1m    441.6 [m[39;49mused,[m[39;49m[1m    366.4 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
+MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 [m[39;49mfree,[m[39;49m[1m      0.0 [m[39;49mused.[m[39;49m[1m   3474.4 [m[39;49mavail Mem [m[39;49m[m[39;49m[K
+[K
+
+[m      1 root      20   0   22088  13252   9476 S   0.0   0.3   0:01.63 systemd                                                                                  [m[39;49m[K
+[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.04 kthreadd                                                                                 [m[39;49m[K
+[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release                                                                   [m[39;49m[K
+[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_g                                                                          [m[39;49m[K
+[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_p                                                                          [m[39;49m[K
+[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_                                                                          [m[39;49m[K
+[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns                                                                          [m[39;49m[K
+[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri                                                              [m[39;49m[K
+[m     11 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/u4:0-ext4-rsv-conversion                                                         [m[39;49m[K
+[m     12 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_pe                                                                          [m[39;49m[K
+[m     13 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread                                                                        [m[39;49m[K
+[m     14 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_rude_kthread                                                                   [m[39;49m[K
+[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_trace_kthread                                                                  [m[39;49m[K
+[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/0                                                                              [m[39;49m[K
+[m     17 root      20   0       0      0      0 I   0.0   0.0   0:01.55 rcu_preempt                                                                              [m[39;49m[K
+[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.81 migration/0                                                                              [m[39;49m[K
+[m     19 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/0                                                                            [m[39;49m[K
+[m     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                  [m[39;49m[K
+[m     21 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                  [m[39;49m[K
+[m     22 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 idle_inject/1                                                                            [m[39;49m[K
+[m     23 root      rt   0       0      0      0 S   0.0   0.0   0:01.06 migration/1                                                                              [m[39;49m[K
+[m     24 root      20   0       0      0      0 S   0.0   0.0   0:00.08 ksoftirqd/1                                                                              [m[39;49m[K
+[m     26 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-events_highpri                                                              [m[39;49m[K
+[m     29 root      20   0       0      0      0 S   0.0   0.0   0:00.01 kdevtmpfs                                                                                [m[39;49m[K
+[m     30 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_                                                                          [m[39;49m[K
+[m     31 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kauditd                                                                                  [m[39;49m[K
+[m     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 khungtaskd                                                                               [m[39;49m[K
+[m     33 root      20   0       0      0      0 S   0.0   0.0   0:00.00 oom_reaper                                                                               [m[39;49m[K
+[m     35 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-write                                                                          [m[39;49m[K
+[m     36 root      20   0       0      0      0 S   0.0   0.0   0:01.91 kcompactd0                                                                               [m[39;49m[K
+[m     38 root      25   5       0      0      0 S   0.0   0.0   0:00.00 ksmd                                                                                     [m[39;49m[K
+[m     39 root      39  19       0      0      0 S   0.0   0.0   0:00.00 khugepaged                                                                               [m[39;49m[K
+[m     40 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kinte                                                                          [m[39;49m[K
+[m     41 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kbloc                                                                          [m[39;49m[K
+[m     42 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-blkcg                                                                          [m[39;49m[K
+[m     43 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 irq/9-acpi                                                                               [m[39;49m[K
+[m     45 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-tpm_d                                                                          [m[39;49m[K
+[m     46 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-ata_s                                                                          [m[39;49m[K
+[m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
+[m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K
+[m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K
+[m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K
+[m     51 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                [m[39;49m[K[51;1H
+[?25h[?0c[K[?2004hhanwen@hanwen:~$ echo "===== CPU HIGH INCIDENT END ====="
+[?2004l===== CPU HIGH INCIDENT END =====
+[?2004hhanwen@hanwen:~$ EXIT[K[K[K[Kdate
+[?2004lSun Apr 19 12:42:44 AM PDT 2026
+[?2004hhanwen@hanwen:~$ exit
+[?2004lexit
+
+Script done on 2026-04-19 00:42:47-07:00 [COMMAND_EXIT_CODE="0"]
