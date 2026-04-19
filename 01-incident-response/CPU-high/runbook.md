@@ -53,17 +53,17 @@ top
 
 Expected:
 
-CPU usage returns to normal
+- CPU usage returns to normal
 ## Root Cause Examples
-Runaway processes
-Infinite loops
-Misconfigured applications
+- Runaway processes
+- Infinite loops
+- Misconfigured applications
 ## Prevention
-Monitor CPU usage
-Set alerts (e.g., 80% threshold)
-Limit resource usage
-Use process management tools
+- Monitor CPU usage
+- Set alerts (e.g., 80% threshold)
+- Limit resource usage
+- Use process management tools
 ## Notes
-Always verify process before killing
-Avoid killing system-critical processes
-Prefer controlled shutdown over force kill
+- Always verify process before killing
+- Avoid killing system-critical processes
+- Prefer controlled shutdown over force kill
