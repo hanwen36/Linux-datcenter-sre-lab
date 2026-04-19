@@ -17,7 +17,8 @@ Run:
 ```bash
 top
 
-Look for:
+```
+##Look for:
 
 CPU usage near 100%
 High load average
