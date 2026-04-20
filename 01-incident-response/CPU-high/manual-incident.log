@@ -1,17 +1,23 @@
 Script started on 2026-04-19 00:35:25-07:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="160" LINES="50"]
 [?2004hhanwen@hanwen:~$ echo "===== CPU HIGH INCIDENT START ======[K"
-[?2004l===== CPU HIGH INCIDENT START =====
+[?2004l
+===== CPU HIGH INCIDENT START =====
 [?2004hhanwen@hanwen:~$ D[Kdate
-[?2004lSun Apr 19 12:35:45 AM PDT 2026
+[?2004l
+Sun Apr 19 12:35:45 AM PDT 2026
 [?2004hhanwen@hanwen:~$ yes <[K> /dev/null &
-[?2004l[1] 2374
+[?2004l
+[1] 2374
 [?2004hhanwen@hanwen:~$ yes > /dev/null &
-[?2004l[2] 2375
+[?2004l
+[2] 2375
 [?2004hhanwen@hanwen:~$ jobs
-[?2004l[1]-  Running                 yes > /dev/null &
+[?2004l
+[1]-  Running                 yes > /dev/null &
 [2]+  Running                 yes > /dev/null &
 [?2004hhanwen@hanwen:~$ top
-[?2004l[?25l[?1c[H[J[mtop - 00:39:13 up  6:38,  1 user,  load average: 2.02, 1.05, 0.46[m[39;49m[m[39;49m[K
+[?2004l
+[?25l[?1c[H[J[mtop - 00:39:13 up  6:38,  1 user,  load average: 2.02, 1.05, 0.46[m[39;49m[m[39;49m[K
 Tasks:[m[39;49m[1m 120 [m[39;49mtotal,[m[39;49m[1m   3 [m[39;49mrunning,[m[39;49m[1m 117 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
 %Cpu(s):[m[39;49m[1m 33.3 [m[39;49mus,[m[39;49m[1m 66.7 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
 MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3326.0 [m[39;49mfree,[m[39;49m[1m    441.7 [m[39;49mused,[m[39;49m[1m    366.2 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
@@ -307,7 +313,8 @@ MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3325.9 
 
 [51;1H
 [?25h[?0c[K[?2004hhanwen@hanwen:~$ ps aux --sort=[K+[K=-%cpu | head
-[?2004lUSER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+[?2004l
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 hanwen      2375 99.9  0.0   5688  1992 pts/0    R    00:36   4:07 yes
 hanwen      2374 99.9  0.0   5688  1984 pts/0    R    00:36   4:09 yes
 root        2378  0.3  0.0      0     0 ?        I    00:39   0:00 [kworker/1:2-events]
@@ -318,10 +325,12 @@ root        2286  0.0  0.0      0     0 ?        I    00:30   0:00 [kworker/1:1-
 root        2290  0.0  0.0      0     0 ?        I    00:30   0:00 [kworker/0:0-events]
 root        2273  0.0  0.0      0     0 ?        I    00:20   0:00 [kworker/0:3-events]
 [?2004hhanwen@hanwen:~$ pkill yes
-[?2004l[1]-  Terminated              yes > /dev/null
+[?2004l
+[1]-  Terminated              yes > /dev/null
 [2]+  Terminated              yes > /dev/null
 [?2004hhanwen@hanwen:~$ top
-[?2004l[?25l[?1c[H[J[mtop - 00:41:49 up  6:41,  1 user,  load average: 1.11, 1.21, 0.63[m[39;49m[m[39;49m[K
+[?2004l
+[?25l[?1c[H[J[mtop - 00:41:49 up  6:41,  1 user,  load average: 1.11, 1.21, 0.63[m[39;49m[m[39;49m[K
 Tasks:[m[39;49m[1m 118 [m[39;49mtotal,[m[39;49m[1m   1 [m[39;49mrunning,[m[39;49m[1m 117 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
 %Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
 MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3325.9 [m[39;49mfree,[m[39;49m[1m    441.7 [m[39;49mused,[m[39;49m[1m    366.3 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
@@ -666,10 +675,13 @@ MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 
 [m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K
 [m     51 root     -51   0       0      0      0 S   0.0   0.0   0:00.00 watchdogd                                                                                [m[39;49m[K[51;1H
 [?25h[?0c[K[?2004hhanwen@hanwen:~$ echo "===== CPU HIGH INCIDENT END ====="
-[?2004l===== CPU HIGH INCIDENT END =====
+[?2004l
+===== CPU HIGH INCIDENT END =====
 [?2004hhanwen@hanwen:~$ EXIT[K[K[K[Kdate
-[?2004lSun Apr 19 12:42:44 AM PDT 2026
+[?2004l
+Sun Apr 19 12:42:44 AM PDT 2026
 [?2004hhanwen@hanwen:~$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-04-19 00:42:47-07:00 [COMMAND_EXIT_CODE="0"]
