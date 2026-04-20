@@ -1,0 +1,58 @@
+Script started on 2026-04-20 01:15:21-07:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="160" LINES="50"]
+[?2004hhanwen@hanwen:/media/sf_linux$ =[Kecho " === Simulating memory high === "
+[?2004l === Simulating memory high === 
+[?2004hhanwen@hanwen:/media/sf_linux$ stress --vm 3 --vm-bytes 1600M &
+[?2004l[1] 2811
+[?2004hhanwen@hanwen:/media/sf_linux$ stress: info: [2811] dispatching hogs: 0 cpu, 0 io, 3 vm, 0 hdd
+STRESS_PID=$!
+[?2004l[?2004hhanwen@hanwen:/media/sf_linux$ sleep 60
+[?2004l[?2004hhanwen@hanwen:/media/sf_linux$ date
+[?2004lMon Apr 20 01:17:28 AM PDT 2026
+[?2004hhanwen@hanwen:/media/sf_linux$ clear
+[?2004l[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo " === Checking memory ==="
+[?2004l === Checking memory ===
+[?2004hhanwen@hanwen:/media/sf_linux$ free -m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:            3915        3832          83           0          34          83
+Swap:           3914        1958        1956
+[?2004hhanwen@hanwen:/media/sf_linux$ clear
+[?2004l[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo "===[K[K[K ===Checking process === "
+[?2004l ===Checking process === 
+[?2004hhanwen@hanwen:/media/sf_linux$ ps aux --sort=-%mem | head -5
+[?2004lUSER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hanwen      2813 30.5 28.0 1642024 1124324 pts/0 R    01:15   1:35 stress --vm 3 --vm-bytes 1600M
+hanwen      2814 38.4 21.0 1642024 842112 pts/0  R    01:15   2:00 stress --vm 3 --vm-bytes 1600M
+hanwen      2812 41.5 15.7 1642024 632060 pts/0  R    01:15   2:09 stress --vm 3 --vm-bytes 1600M
+root         367  0.0  0.6 288988 27324 ?        SLsl Apr19   0:04 /sbin/multipathd -d -s
+[?2004hhanwen@hanwen:/media/sf_linux$ free 0[K-m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:            3915        2893        1127           0          29        1022
+Swap:           3914          62        3852
+[?2004hhanwen@hanwen:/media/sf_linux$ free -m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:            3915        3443         577           0          27         472
+Swap:           3914        1615        2299
+[?2004hhanwen@hanwen:/media/sf_linux$ free -m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:            3915        1979        2040           0          29        1936
+Swap:           3914        1540        2374
+[?2004hhanwen@hanwen:/media/sf_linux$ clear
+[?2004l[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo " killin[Kng stress process ==="
+[?2004l killing stress process ===
+[?2004hhanwen@hanwen:/media/sf_linux$ K[Kkill $STRESS_piod[K[Kd[K[K[KPID
+[?2004l[?2004hhanwen@hanwen:/media/sf_linux$  [Ksleep 5
+[?2004le[1]+  Terminated              stress --vm 3 --vm-bytes 1600M
+[?2004hhanwen@hanwen:/media/sf_linux$ echo "[s[KSTEP 5] Verifying recovery===[C[C[C[C[1@=[1@=[1@=[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csleep 5[Kecho " ===[STEP 5] Verifying recovery === "[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l === Verifying recovery === 
+[?2004hhanwen@hanwen:/media/sf_linux$ free -m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:            3915         261        3754           0          38        3654
+Swap:           3914          61        3853
+[?2004hhanwen@hanwen:/media/sf_linux$ echo " ====[K memory high incident end === "
+[?2004l === memory high incident end === 
+[?2004hhanwen@hanwen:/media/sf_linux$ date
+[?2004lMon Apr 20 01:28:48 AM PDT 2026
+[?2004hhanwen@hanwen:/media/sf_linux$ exit
+[?2004lexit
+
+Script done on 2026-04-20 01:28:52-07:00 [COMMAND_EXIT_CODE="0"]
