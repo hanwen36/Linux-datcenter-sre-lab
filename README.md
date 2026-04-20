@@ -2,8 +2,16 @@
 
 This repository is actively being developed.
 
-Currently, the following incidents are fully implemented:
+Completed incidents:
 - Disk Full Incident
 - CPU High Incident
 
-Additional incident scenarios are in progress and will be completed incrementally.
+In addition to building incident simulations, this project also focuses on learning and applying SRE-style automation.
+
+Automation scripts are being developed to:
+- Detect issues
+- Identify root causes
+- Perform corrective actions
+- Validate system recovery
+
+More scenarios and automation improvements will be added incrementally.
