@@ -1,0 +1,157 @@
+Script started on 2026-04-20 23:00:00-07:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="160" LINES="50"]
+[?2004hhanwen@hanwen:/media/sf_linux$ echo "=== M[KMEMORY HIGH INCIDENT START ==="
+[?2004l=== MEMORY HIGH INCIDENT START ===
+[?2004hhanwen@hanwen:/media/sf_linux$ date
+[?2004lMon Apr 20 11:00:27 PM PDT 2026
+[?2004hhanwen@hanwen:/media/sf_linux$ echo ""
+[?2004l
+[?2004hhanwen@hanwen:/media/sf_linux$ echo " Baseline check before simulation "
+[?2004l Baseline check before simulation 
+[?2004hhanwen@hanwen:/media/sf_linux$ free-m
+[?2004lCommand 'free-m' not found, did you mean:
+  command 'freedm' from deb freedm (0.12.1-3)
+Try: sudo apt install <deb name>
+[?2004hhanwen@hanwen:/media/sf_linux$ free-m[C[K[K -m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:            3915         369        3620           0          90        3546
+Swap:           3914          59        3855
+[?2004hhanwen@hanwen:/media/sf_linux$ echo ''[K[K""
+[?2004l
+[?2004hhanwen@hanwen:/media/sf_linux$ ./memory_check.sh
+[?2004l======================================
+        Memory Monitoring Tool        
+======================================
+Mon Apr 20 11:01:27 PM PDT 2026
+
+[INFO] Checking memory usage...
+
+[INFO] Memory Total     : 4009940 KB
+[INFO] Memory Used      : 377332 KB
+[INFO] Memory Free      : 3708668 KB
+[INFO] Memory Available : 3632608 KB
+[INFO] Memory Usage     : 9%
+[INFO] Swap Usage       : 1%
+
+[OK] Memory usage is normal
+
+[VALIDATION]
+               total        used        free      shared  buff/cache   available
+Mem:            3915         368        3621           0          90        3547
+Swap:           3914          59        3855
+
+======================================
+          CHECK COMPLETED             
+======================================
+[?2004hhanwen@hanwen:/media/sf_linux$ clear
+[?2004l[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo ""
+[?2004l
+[?2004hhanwen@hanwen:/media/sf_linux$ echo " Memory pressure simulation start "
+[?2004l Memory pressure simulation start 
+[?2004hhanwen@hanwen:/media/sf_linux$ date
+[?2004lMon Apr 20 11:03:41 PM PDT 2026
+[?2004hhanwen@hanwen:/media/sf_linux$ free -m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:            3915        3900         117           4          39          15
+Swap:           3914         306        3608
+[?2004hhanwen@hanwen:/media/sf_linux$ echo ""
+[?2004l
+[?2004hhanwen@hanwen:/media/sf_linux$ e[Kps aux --sort=-%mem | head -6
+[?2004lUSER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hanwen      6072 98.6 41.7 1787740 1673236 tty2  R+   23:03   1:50 stress-ng-vm [run]
+hanwen      6073 74.0 38.7 1787740 1553356 tty2  R+   23:03   1:22 stress-ng-vm [run]
+root         367  0.0  0.6 288988 27324 ?        SLsl 05:00   0:25 /sbin/multipathd -d -s
+hanwen      6069  0.0  0.2  81248  9088 tty2     SL+  23:03   0:00 stress-ng --vm 2 --vm-bytes 95% --timeout 600s
+root        2738  0.0  0.2 616412  8480 ?        Ssl  08:55   0:06 /usr/libexec/fwupd/fwupd
+[?2004hhanwen@hanwen:/media/sf_linux$ ./memory_check.sh
+[?2004l======================================
+        Memory Monitoring Tool        
+======================================
+Mon Apr 20 11:06:19 PM PDT 2026
+
+[INFO] Checking memory usage...
+
+[INFO] Memory Total     : 4009940 KB
+[INFO] Memory Used      : 2246028 KB
+[INFO] Memory Free      : 1827972 KB
+[INFO] Memory Available : 1726712 KB
+[INFO] Memory Usage     : 56%
+[INFO] Swap Usage       : 1%
+
+[OK] Memory usage is normal
+
+[VALIDATION]
+               total        used        free      shared  buff/cache   available
+Mem:            3915        2273        1740           4          47        1642
+Swap:           3914          64        3850
+
+======================================
+          CHECK COMPLETED             
+======================================
+[?2004hhanwen@hanwen:/media/sf_linux$ ./memory_check.sh
+[?2004l======================================
+        Memory Monitoring Tool        
+======================================
+Mon Apr 20 11:06:25 PM PDT 2026
+
+[INFO] Checking memory usage...
+
+[INFO] Memory Total     : 4009940 KB
+[INFO] Memory Used      : 3715312 KB
+[INFO] Memory Free      : 394696 KB
+[INFO] Memory Available : 294404 KB
+[INFO] Memory Usage     : 92%
+[INFO] Swap Usage       : 1%
+
+[WARNING] High memory usage detected by percentage
+
+[WARNING] Low available memory detected
+
+[ANALYSIS] Top memory-consuming processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hanwen      6073 85.0 42.5 1787740 1708160 tty2  R+   23:03   2:47 stress-ng-vm [run]
+root         367  0.0  0.6 288988 27324 ?        SLsl 05:00   0:25 /sbin/multipathd -d -s
+hanwen      6069  0.0  0.2  81248  9092 tty2     SL+  23:03   0:00 stress-ng --vm 2 --vm-bytes 95% --timeout 600s
+root        2738  0.0  0.2 616412  8484 ?        Ssl  08:55   0:06 /usr/libexec/fwupd/fwupd
+root         310  0.0  0.1  66832  7572 ?        S<s  05:00   0:01 /usr/lib/systemd/systemd-journald
+
+[ROOT CAUSE]
+Possible causes:
+- Memory-intensive applications
+- Memory leak
+- Too many concurrent processes
+- Insufficient system memory
+
+[ACTION REQUIRED]
+Suggested actions:
+1. Check memory usage: free -m
+2. Identify processes: ps aux --sort=-%mem | head
+3. Inspect process: ps -ef | grep <process_name>
+4. Stop process: kill -9 <PID>
+5. Monitor swap usage
+6. Consider scaling memory
+
+[VALIDATION]
+               total        used        free      shared  buff/cache   available
+Mem:            3915        2339        1674           4          48        1576
+Swap:           3914          64        3850
+
+======================================
+          CHECK COMPLETED             
+======================================
+[?2004hhanwen@hanwen:/media/sf_linux$ p[Kpkill stress-ng[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kecho ""
+[?2004l
+[?2004hhanwen@hanwen:/media/sf_linux$ echo "=== t[K[KTerminated stress [K-ng process"
+[?2004l===Terminated stress-ng process
+[?2004hhanwen@hanwen:/media/sf_linux$ date
+[?2004lMon Apr 20 11:10:10 PM PDT 2026
+[?2004hhanwen@hanwen:/media/sf_linux$ ps aux | grep stress-ng
+[?2004lhanwen      6069  0.0  0.0  81248  3044 tty2     SL+  23:03   0:00 [01;31m[Kstress-ng[m[K --vm 2 --vm-bytes 95% --timeout 600s
+hanwen      6070  0.0  0.0  81252  1384 tty2     S+   23:03   0:00 [01;31m[Kstress-ng[m[K-vm [wait]
+hanwen      6071  0.0  0.0  81252  1384 tty2     S+   23:03   0:00 [01;31m[Kstress-ng[m[K-vm [wait]
+hanwen      6072 99.3 13.8 1787740 556852 tty2   R+   23:03   7:07 [01;31m[Kstress-ng[m[K-vm [run]
+hanwen      6073 92.9  4.5 1787740 183716 tty2   R+   23:03   6:40 [01;31m[Kstress-ng[m[K-vm [run]
+hanwen      6138  0.0  0.0   6680  2316 pts/0    S+   23:10   0:00 grep --color=auto [01;31m[Kstress-ng[m[K
+[?2004hhanwen@hanwen:/media/sf_linux$ 0ps aux | grep stress-ngdate[Kecho "===Terminated stress-ng process""[K./memory_check.shps aux --sort=-%mem | head -6echo ""[Kfree -m[3Pdatefree -mecho ""ps aux --sort=-%mem | head -6[12P./memory_check.sh[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpkill stress-ng
+[?2004l[?2004hhanwen@hanwen:/media/sf_linux$ pkill stress-ng[8@s aux | grep[C[C[C[C[C[C[C[C[C[C
+[?2004lhanwen      6143  0.0  0.0   6680  2316 pts/0    S+   23:10   0:00 grep --color=auto [01;31m[Kstress-ng[m[K
+[?2004hhanwen@hanwen:/media/sf_linux$ ps aux | grep stress-ng[8Pkill[C[C[C[C[C[C[C[C[C[C[8@s aux | grep[C[C[C[C[C[C[C[C[C[Cdate[Kecho "===Terminated stress-ng process""[K./memo
