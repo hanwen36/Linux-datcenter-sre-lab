@@ -32,28 +32,36 @@ chmod +x memory_check.sh
 ```
 Example Workflow
 1. Baseline Check (Normal State)
+```bash
 free -m
 ./memory_check.sh
+```
 2. Simulate Memory High (in another TTY)
+```bash
 stress-ng --vm 2 --vm-bytes 95% --timeout 600s
+```
 3. Run the Script
+```bash
 ./memory_check.sh
+```
 4. Script Behavior
-Detects high memory usage using thresholds
-Warns if available memory is low
-Warns if swap usage is elevated
-Displays top memory-consuming processes
-Provides root cause analysis suggestions
+- Detects high memory usage using thresholds
+- Warns if available memory is low
+- Warns if swap usage is elevated
+- Displays top memory-consuming processes
+- Provides root cause analysis suggestions
 Recommends troubleshooting steps
 5. User Action
 
 Identify and terminate the process:
-
+```bash
 ps aux | grep stress-ng
 pkill stress-ng
+```
 6. Validation
+```bash
 ./memory_check.sh
-
+```
 Memory usage should return to normal after terminating the process.
 
 Example Output
