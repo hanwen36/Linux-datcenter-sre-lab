@@ -1,10 +1,13 @@
 Script started on 2026-04-18 02:56:29-07:00 [TERM="linux" TTY="/dev/pts/0" COLUMNS="160" LINES="50"]
 [?2004hhanwen@hanwen:~$ date
-[?2004lSat Apr 18 02:56:32 AM PDT 2026
+[?2004l
+Sat Apr 18 02:56:32 AM PDT 2026
 [?2004hhanwen@hanwen:~$ echo "===== STEP1: START - SYSTEM NORMAL ====='[K"
-[?2004l===== STEP1: START - SYSTEM NORMAL =====
+[?2004l
+===== STEP1: START - SYSTEM NORMAL =====
 [?2004hhanwen@hanwen:~$ DF[K[Kdf -h
-[?2004lFilesystem      Size  Used Avail Use% Mounted on
+[?2004l
+Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           392M  1.1M  391M   1% /run
 /dev/sda2        96G  7.8G   84G   9% /
 tmpfs           2.0G     0  2.0G   0% /dev/shm
@@ -12,11 +15,14 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 linux           952G  469G  483G  50% /media/sf_linux
 tmpfs           392M   16K  392M   1% /run/user/1000
 [?2004hhanwen@hanwen:~$ echo "===== STEMP[K[KP 2: SIMULATE DISK FULL ====="
-[?2004l===== STEP 2: SIMULATE DISK FULL =====
+[?2004l
+===== STEP 2: SIMULATE DISK FULL =====
 [?2004hhanwen@hanwen:~$ SUDO [K[K[K[K[Ksudo fallocate 0[K-l 80 testfile1.img[Cg testfile1.img[1P testfile1.imgG testfile1.img
-[?2004l[sudo] password for hanwen: 
+[?2004l
+[sudo] password for hanwen: 
 [?2004hhanwen@hanwen:~$ df -h
-[?2004lFilesystem      Size  Used Avail Use% Mounted on
+[?2004l
+Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           392M  1.1M  391M   1% /run
 /dev/sda2        96G   88G  4.0G  96% /
 tmpfs           2.0G     0  2.0G   0% /dev/shm
@@ -24,11 +30,15 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 linux           952G  469G  483G  50% /media/sf_linux
 tmpfs           392M   16K  392M   1% /run/user/1000
 [?2004hhanwen@hanwen:~$ cleaar[K[Kr
-[?2004l[H[J[3J[?2004hhanwen@hanwen:~$ echo "===== STEP 3: RUN AUTOMATION ====="
-[?2004l===== STEP 3: RUN AUTOMATION =====
+[?2004l
+[H[J[3J[?2004hhanwen@hanwen:~$ echo "===== STEP 3: RUN AUTOMATION ====="
+[?2004l
+===== STEP 3: RUN AUTOMATION =====
 [?2004hhanwen@hanwen:~$ chmod +x disk_check.sh
-[?2004l[?2004hhanwen@hanwen:~$ chmod +x disk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh.disk_check.sh/disk_check.sh
-[?2004l==========================
+[?2004l
+[?2004hhanwen@hanwen:~$ chmod +x disk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh[1Pdisk_check.sh.disk_check.sh/disk_check.sh
+[?2004l
+==========================
    Disk Monitoring Tool   
 ==========================
 Sat Apr 18 03:01:04 AM PDT 2026
@@ -60,12 +70,15 @@ Do you want to delete this file? /home/hanwen/testfile1.img (y/n): y
        CHECK COMPLETED        
 ==============================
 [?2004hhanwen@hanwen:~$ echo "===== STEP 4: VALIDATION ====="
-[?2004l===== STEP 4: VALIDATION =====
+[?2004l
+===== STEP 4: VALIDATION =====
 [?2004hhanwen@hanwen:~$ dh -h 
-[?2004lCommand 'dh' not found, but can be installed with:
+[?2004l
+Command 'dh' not found, but can be installed with:
 sudo apt install debhelper
 [?2004hhanwen@hanwen:~$ df -h
-[?2004lFilesystem      Size  Used Avail Use% Mounted on
+[?2004l
+Filesystem      Size  Used Avail Use% Mounted on
 tmpfs           392M  1.1M  391M   1% /run
 /dev/sda2        96G  7.8G   84G   9% /
 tmpfs           2.0G     0  2.0G   0% /dev/shm
@@ -73,10 +86,13 @@ tmpfs           5.0M     0  5.0M   0% /run/lock
 linux           952G  469G  483G  50% /media/sf_linux
 tmpfs           392M   16K  392M   1% /run/user/1000
 [?2004hhanwen@hanwen:~$ ls -lh testfile*.img
-[?2004lls: cannot access 'testfile*.img': No such file or directory
+[?2004l
+ls: cannot access 'testfile*.img': No such file or directory
 [?2004hhanwen@hanwen:~$ echo "===== INCIDENT COMPLETED ======[K"
-[?2004l===== INCIDENT COMPLETED =====
+[?2004l
+===== INCIDENT COMPLETED =====
 [?2004hhanwen@hanwen:~$ EXIT[K[K[K[Kexit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-04-18 03:06:08-07:00 [COMMAND_EXIT_CODE="0"]
