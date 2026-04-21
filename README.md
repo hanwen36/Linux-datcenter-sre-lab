@@ -5,6 +5,7 @@ This repository is actively being developed.
 Completed incidents:
 - Disk Full Incident
 - CPU High Incident
+- Memory High Incident 
 
 In addition to building incident simulations, this project also focuses on learning and applying SRE-style automation.
 
