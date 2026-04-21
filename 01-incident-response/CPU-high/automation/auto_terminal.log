@@ -1,10 +1,17 @@
 Script started on 2026-04-19 22:09:44-07:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="160" LINES="50"]
 [?2004hhanwen@hanwen:/media/sf_linux$ +[K=[Kecho [K"[K "===[K[K[K ===== CPU High[K[K[KIg[KGH Aut[K[K[KAUTOMATION START ===="[K [K= "
-[?2004l ===== CPU HIGH AUTOMATION START ===== 
+[?2004l
+ ===== CPU HIGH AUTOMATION START ===== 
 [?2004hhanwen@hanwen:/media/sf_linux$ date
-[?2004lSun Apr 19 10:11:13 PM PDT 2026
-[?2004hhanwen@hanwen:/media/sf_linux$ dateecho " ===== CPU HIGH AUTOMATION START ===== "[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creboot[Ksudo usermod -aG vboxsf $USERreboot[Kecho " ===== CPU HIGH AUTOMATION START ===== "[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdate[K[Kdateecho " ===== CPU HIGH AUTOMATION START ===== "[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creboot[Ksudo usermod -aG vboxsf $USERreboot[Ksudo sh VBoxLinuxAdditions.run-arm64.runmd64.run[6POXLinuxAdditions.run[15Pls /media/cdromsudo sh VBOXLinuxAdditions.run[15Pcd /media/cdrom[19@sudo mount /dev/cdrom[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pkdir[C[C[C[C[C[C[C[C[C[C[C[C[Capt install build-essential dkms linux-headers-$(uname -r)[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cupdate[K[6Pnano testls[Kcd /media/sf_linux/ls[Kreboot[K[K[K[K[K[K./auto [K_cpu_check.sh
-[?2004l===============================
+[?2004l
+Sun Apr 19 10:11:13 PM PDT 2026
+[?2004hhanwen@hanwen:/media/sf_linux$ dateecho " ===== CPU HIGH AUTOMATION START ===== "
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creboot[Ksudo usermod -aG vboxsf $USERreboot[Kecho " ===== CPU HIGH AUTOMATION START ===== "
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdate[K[Kdateecho " ===== CPU HIGH AUTOMATION START ===== "
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creboot[Ksudo usermod -aG vboxsf $USERreboot[Ksudo sh VBoxLinuxAdditions.run-arm64.runmd64.run[6POXLinuxAdditions.run[15Pls /media/cdromsudo sh VBOXLinuxAdditions.run[15Pcd /media/cdrom[19@sudo mount /dev/cdrom[C[C[C[C[C[C[C[C[C[C[C[C[C[11Pkdir[C[C[C[C[C[C[C[C[C[C[C[C[Capt install build-essential dkms linux-headers-$(uname -r)
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cupdate[K[6Pnano testls[Kcd /media/sf_linux/ls[Kreboot[K[K[K[K[K[K./auto [K_cpu_check.sh
+[?2004l
+===============================
       CPU Monitoring Tool      
 ===============================
 Sun Apr 19 10:11:55 PM PDT 2026
@@ -21,7 +28,8 @@ Sun Apr 19 10:11:55 PM PDT 2026
        CHECK COMPLETED        
 ==============================
 [?2004hhanwen@hanwen:/media/sf_linux$ top
-[?2004l[?25l[?1c[H[J[mtop - 22:14:08 up  1:10,  1 user,  load average: 0.00, 0.02, 0.04[m[39;49m[m[39;49m[K
+[?2004l
+[?25l[?1c[H[J[mtop - 22:14:08 up  1:10,  1 user,  load average: 0.00, 0.02, 0.04[m[39;49m[m[39;49m[K
 Tasks:[m[39;49m[1m 117 [m[39;49mtotal,[m[39;49m[1m   1 [m[39;49mrunning,[m[39;49m[1m 116 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
 %Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
 MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3402.8 [m[39;49mfree,[m[39;49m[1m    428.9 [m[39;49mused,[m[39;49m[1m    301.6 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
@@ -121,18 +129,26 @@ MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 
 [m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K
 [m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K[51;1H
 [?25h[?0c[K[?2004hhanwen@hanwen:/media/sf_linux$ clear
-[?2004l[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ "====[K[K[K===[K[K[K[Km[K [K===Make scp[K[Kp[K[Kcp[K[KCPU [K[K[K[K[K[K[K[K[KSIMULATE CPU HIGH USAGE [K ====[K"
-[?2004l===SIMULATE CPU HIGH USAGE ===: command not found
+[?2004l
+[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ "====[K[K[K===[K[K[K[Km[K [K===Make scp[K[Kp[K[Kcp[K[KCPU [K[K[K[K[K[K[K[K[KSIMULATE CPU HIGH USAGE [K ====[K"
+[?2004l
+===SIMULATE CPU HIGH USAGE ===: command not found
 [?2004hhanwen@hanwen:/media/sf_linux$ yes > /dev/null &[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
-[?2004l[?2004hhanwen@hanwen:/media/sf_linux$ clear
-[?2004l[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo "=== make [K[K[K[K[KMAKE CPU HIGH ==="
-[?2004l=== MAKE CPU HIGH ===
+[?2004l
+[?2004hhanwen@hanwen:/media/sf_linux$ clear
+[?2004l
+[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo "=== make [K[K[K[K[KMAKE CPU HIGH ==="
+[?2004l
+=== MAKE CPU HIGH ===
 [?2004hhanwen@hanwen:/media/sf_linux$ yes [K > /dev/null %[K&
-[?2004l[1] 1698
+[?2004l
+[1] 1698
 [?2004hhanwen@hanwen:/media/sf_linux$ yes > /dev/null &
-[?2004l[2] 1699
+[?2004l
+[2] 1699
 [?2004hhanwen@hanwen:/media/sf_linux$ top
-[?2004l[?25l[?1c[H[J[mtop - 22:21:08 up  1:17,  1 user,  load average: 1.36, 0.40, 0.15[m[39;49m[m[39;49m[K
+[?2004l
+[?25l[?1c[H[J[mtop - 22:21:08 up  1:17,  1 user,  load average: 1.36, 0.40, 0.15[m[39;49m[m[39;49m[K
 Tasks:[m[39;49m[1m 118 [m[39;49mtotal,[m[39;49m[1m   3 [m[39;49mrunning,[m[39;49m[1m 115 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
 %Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m100.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m  0.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
 MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3402.4 [m[39;49mfree,[m[39;49m[1m    428.6 [m[39;49mused,[m[39;49m[1m    302.4 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
@@ -918,13 +934,19 @@ MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 
 [m     47 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md                                                                             [m[39;49m[K
 [m     48 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-md_bi                                                                          [m[39;49m[K[51;1H
 [?25h[?0c[K[?2004hhanwen@hanwen:/media/sf_linux$ run[K[K[Kec[K[Kcl
-[?2004lCommand 'cl' not found, but can be installed with:
+[?2004l
+Command 'cl' not found, but can be installed with:
 sudo apt install cl-launch
 [?2004hhanwen@hanwen:/media/sf_linux$ clear
-[?2004l[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo " === r[KRUNING THE AUTOMATION [K_SH=== "
-[?2004l === RUNING THE AUTOMATION_SH=== 
-[?2004hhanwen@hanwen:/media/sf_linux$ .a[K/auto.[K/[Kecho " === RUNING THE AUTOMATION_SH=== "[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./auto[Kecho " === RUNING THE AUTOMATION_SH=== "[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclear[K[Ktopyes > /dev/null &echo "=== MAKE CPU HIGH ==="clear[K"===SIMULATE CPU HIGH USAGE ==="clear[K[2Ptop./auto_cpu_check.sh
-[?2004l===============================
+[?2004l
+[H[J[3J[?2004hhanwen@hanwen:/media/sf_linux$ echo " === r[KRUNING THE AUTOMATION [K_SH=== "
+[?2004l
+ === RUNING THE AUTOMATION_SH=== 
+[?2004hhanwen@hanwen:/media/sf_linux$ .a[K/auto.[K/[Kecho " === RUNING THE AUTOMATION_SH=== "
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./auto[Kecho " === RUNING THE AUTOMATION_SH=== "
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclear[K[Ktopyes > /dev/null &echo "=== MAKE CPU HIGH ==="clear[K"===SIMULATE CPU HIGH USAGE ==="clear[K[2Ptop./auto_cpu_check.sh
+[?2004l
+===============================
       CPU Monitoring Tool      
 ===============================
 Sun Apr 19 10:31:44 PM PDT 2026
@@ -953,7 +975,8 @@ Sun Apr 19 10:31:44 PM PDT 2026
 [1]-  Terminated              yes > /dev/null
 [2]+  Terminated              yes > /dev/null
 [?2004hhanwen@hanwen:/media/sf_linux$ tp[Kop
-[?2004l[?25l[?1c[H[J[mtop - 22:33:41 up  1:30,  1 user,  load average: 0.32, 1.34, 1.03[m[39;49m[m[39;49m[K
+[?2004l
+[?25l[?1c[H[J[mtop - 22:33:41 up  1:30,  1 user,  load average: 0.32, 1.34, 1.03[m[39;49m[m[39;49m[K
 Tasks:[m[39;49m[1m 116 [m[39;49mtotal,[m[39;49m[1m   1 [m[39;49mrunning,[m[39;49m[1m 115 [m[39;49msleeping,[m[39;49m[1m   0 [m[39;49mstopped,[m[39;49m[1m   0 [m[39;49mzombie[m[39;49m[m[39;49m[K
 %Cpu(s):[m[39;49m[1m  0.0 [m[39;49mus,[m[39;49m[1m  0.0 [m[39;49msy,[m[39;49m[1m  0.0 [m[39;49mni,[m[39;49m[1m100.0 [m[39;49mid,[m[39;49m[1m  0.0 [m[39;49mwa,[m[39;49m[1m  0.0 [m[39;49mhi,[m[39;49m[1m  0.0 [m[39;49msi,[m[39;49m[1m  0.0 [m[39;49mst[m[39;49m[m [m[39;49m[m[39;49m[K
 MiB Mem :[m[39;49m[1m   3916.0 [m[39;49mtotal,[m[39;49m[1m   3401.9 [m[39;49mfree,[m[39;49m[1m    428.8 [m[39;49mused,[m[39;49m[1m    302.6 [m[39;49mbuff/cache[m[39;49m[m [m[39;49m[m    [m[39;49m[m[39;49m[K
@@ -1053,10 +1076,13 @@ MiB Swap:[m[39;49m[1m   3915.0 [m[39;49mtotal,[m[39;49m[1m   3915.0 
 [m     49 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-edac-                                                                          [m[39;49m[K
 [m     50 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-devfr                                                                          [m[39;49m[K[51;1H
 [?25h[?0c[K[?2004hhanwen@hanwen:/media/sf_linux$ echo " ==== CPU HIHG[K[KGH AUTOMATION END ====="
-[?2004l ==== CPU HIGH AUTOMATION END =====
+[?2004l
+ ==== CPU HIGH AUTOMATION END =====
 [?2004hhanwen@hanwen:/media/sf_linux$ date
-[?2004lSun Apr 19 10:34:53 PM PDT 2026
+[?2004l
+Sun Apr 19 10:34:53 PM PDT 2026
 [?2004hhanwen@hanwen:/media/sf_linux$ exit
-[?2004lexit
+[?2004l
+exit
 
 Script done on 2026-04-19 22:34:55-07:00 [COMMAND_EXIT_CODE="0"]
