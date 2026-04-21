@@ -65,6 +65,7 @@ pkill stress-ng
 Memory usage should return to normal after terminating the process.
 
 Example Output
+```bash
 [WARNING] High memory usage detected
 [WARNING] Low available memory detected
 
@@ -81,13 +82,14 @@ Possible causes:
 [ACTION REQUIRED]
 Suggested actions:
 Kill process or reduce memory usage
-Learning Outcome
-Automating memory monitoring using Bash
-Understanding Linux memory metrics (used vs available)
-Identifying high memory usage scenarios
-Practicing incident response workflow
-Improving troubleshooting efficiency
-Notes
-This script is designed for learning and simulation purposes
-In production environments, terminating processes requires validation and approval
-Memory usage should be evaluated using both percentage and available memory
+```
+## Learning Outcome
+- Automating memory monitoring using Bash
+- Understanding Linux memory metrics (used vs available)
+- Identifying high memory usage scenarios
+- Practicing incident response workflow
+- Improving troubleshooting efficiency
+## Notes
+- This script is designed for learning and simulation purposes
+- In production environments, terminating processes requires validation and approval
+- Memory usage should be evaluated using both percentage and available memory
