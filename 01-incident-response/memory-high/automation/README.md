@@ -29,6 +29,7 @@ memory_check.sh
 ```bash
 chmod +x memory_check.sh
 ./memory_check.sh
+```
 Example Workflow
 1. Baseline Check (Normal State)
 free -m
