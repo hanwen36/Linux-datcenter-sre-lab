@@ -27,9 +27,9 @@ Run:
 lsof | grep deleted
 ```
 Look for output like:
-
+```bash
 process_name  PID user  FD  ...  /path/file.log (deleted)
-
+```
 This indicates the file is deleted but still held open by a process.
 
 ## Step 4: Identify process
