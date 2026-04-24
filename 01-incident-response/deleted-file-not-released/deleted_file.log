@@ -1,0 +1,77 @@
+Script started on 2026-04-23 00:53:20-07:00 [TERM="linux" TTY="/dev/tty1" COLUMNS="160" LINES="50"]
+[?2004hhanwen@hanwen:~$ =[Kecho [K "=== d[KDELETED FILE NOT REASED ==="
+[?2004l=== DELETED FILE NOT REASED ===
+[?2004hhanwen@hanwen:~$ date
+[?2004lThu Apr 23 12:53:41 AM PDT 2026
+[?2004hhanwen@hanwen:~$ -[Kdf -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        96G   82G   11G  90% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  471G  481G  50% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~$ ls -lh big.log
+[?2004l-rw-rw-r-- 1 hanwen hanwen 74G Apr 23 00:54 big.log
+[?2004hhanwen@hanwen:~$ df -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        96G   82G   11G  90% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  471G  481G  50% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~$ df [K[K[Kdf[K[Krm -[K[K[K[K=[Krm -=f big.log
+[?2004lrm: invalid option -- '='
+Try 'rm --help' for more information.
+[?2004hhanwen@hanwen:~$ rm -=f big.log[1P
+[?2004l[?2004hhanwen@hanwen:~$ df -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        96G   82G   11G  90% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  471G  481G  50% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~$ ls
+[?2004l[0m[01;32mauto_cpu_check.sh[0m  [01;34mcpu_high[0m              deleted_file.log    disk_automation.log  learning.pem              memory_check.sh
+[01;32mcheck_shadow.sh[0m    create_test_file.log  disk_autocheck.txt  [01;32mdisk_check.sh[0m        [01;34mlinux-datacenter-sre-lab[0m
+[?2004hhanwen@hanwen:~$ echo " [KFIEL [K[K[K[KIEL[K[K[KIEL[K[K[K[Kfile deleted it i[Kgron[K[K[K[K[Kgon[K[K[K gond[Ke from the [K[K[K[Kls.[C[C[K"==[K[K[K === "[1@ [1@=[1@=[1@=[1@ 
+[?2004l === file deleted it gone from ls === 
+[?2004hhanwen@hanwen:~$ clear
+[?2004l[H[J[3J[?2004hhanwen@hanwen:~$ df -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        96G   82G   11G  90% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  471G  481G  50% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~$ l[Kdu [K[K[Klsop[K[Kof | grep dete[K[K[Keleted
+[?2004lbash      10756                          hanwen    3w      REG    8,2 78643204048 1835835 /home/hanwen/big.log ([01;31m[Kdeleted[m[K)
+script    10833                          hanwen    6w      REG    8,2           0 1835838 /home/hanwen/[01;31m[Kdeleted[m[K_file.log
+sleep     11616                          hanwen    3w      REG    8,2 78643204048 1835835 /home/hanwen/big.log ([01;31m[Kdeleted[m[K)
+[?2004hhanwen@hanwen:~$ ech "=== fil[K[K[Kpro[K[K[KPID finded[K[K[K[K[K[K[K[K[K[Kid[K[KIdentified processes hol[Klding deleted files "[K==="[K "[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@F[1@o[1@u[1@n[1@d[1@ [1@p[1@r[1@o[1@c[1@e[1@s[1@s[1@e[1@s[1@ [1@&[1@ [1@t[1@e[1@r[1@m[1@i[1@n[1@a[1@t[1@i[1@o[1P[1@n[1@g[1@ [1@p[1@r[1@o[1@c[1@e[1@s[1@s[1@ [1@t[1@o[1@ [1@r[1@e[1@l[1@e[1@a[1@s[1@e[1@ [1@d[1@i[1@s[1@k[1@ [1@s[1@p[1@a[1@c[1@e[1@ 
+[?2004lCommand 'ech' not found, did you mean:
+  command 'ecm' from deb gmp-ecm (7.0.5+ds-1)
+  command 'ecj' from deb ecj (3.32.0+eclipse4.26-2)
+  command 'echo' from deb coreutils (9.4-3ubuntu6.2)
+  command 'ecl' from deb ecl (21.2.1+ds-4)
+  command 'dch' from deb devscripts (2.23.7ubuntu0.2)
+  command 'bch' from deb bikeshed (1.78-0ubuntu1)
+Try: sudo apt install <deb name>
+[?2004hhanwen@hanwen:~$ ech "=== Found processes & terminating process to release disk space === "[C[1P[1P[1P[1@e[1@c[1@h[1@o
+[?2004l=== Found processes & terminating process to release disk space === 
+[?2004hhanwen@hanwen:~$ kill 10756
+[?2004l[?2004hhanwen@hanwen:~$ kill 10756echo "=== Found processes & terminating process to release disk space === "[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clsof | grep deleted[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h[K
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           392M  1.1M  391M   1% /run
+/dev/sda2        96G  8.5G   84G  10% /
+tmpfs           2.0G     0  2.0G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+linux           952G  471G  481G  50% /media/sf_linux
+tmpfs           392M   16K  392M   1% /run/user/1000
+[?2004hhanwen@hanwen:~$ exit
+[?2004lexit
+
+Script done on 2026-04-23 01:06:26-07:00 [COMMAND_EXIT_CODE="0"]
